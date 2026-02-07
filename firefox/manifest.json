@@ -1,0 +1,42 @@
+{
+	"manifest_version": 3,
+	"name": "chzzk pfix",
+	"description": "fixes & bypasses for chzzk",
+	"version": "1.0",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "chzzk-pfix@meowing.net",
+			"data_collection_permissions": {
+				"required": [
+					"none"
+				]
+			}
+		}
+	},
+	"permissions": [
+		"declarativeNetRequest",
+		"webRequest",
+		"webRequestBlocking",
+		"webRequestFilterResponse"
+	],
+	"host_permissions": [
+		"*://chzzk.naver.com/*",
+		"*://api.chzzk.naver.com/*",
+		"*://ex-nlive-streaming.navercdn.com/*",
+		"*://livecloud.akamaized.net/*"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset_1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	}
+}

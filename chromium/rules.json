@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"priority": 1,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"transform": {
+					"host": "ex-nlive-streaming.navercdn.com"
+				}
+			}
+		},
+		"condition": {
+			"urlFilter": "||livecloud.akamaized.net",
+			"resourceTypes": [
+				"xmlhttprequest"
+			]
+		}
+	}
+]
